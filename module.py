@@ -15,7 +15,7 @@ def get_song_chords(input_file):
     with open(input_file) as song:
         chords = set()
         for line in song:
-            result = re.findall(r"\b([CDEFGAHB][#b]?m?[1-9]?(?:/[CDEFGAHB][#b]?)?)(?:\s|$)", line)
+            result = re.findall(r"\b([CDEFGAHB][#b]?m?(?:dim|sus|maj)?[1-9]?(?:/[CDEFGAHB][#b]?)?)(?:\s|$)", line)
             chords.update(result)
     return chords
 
