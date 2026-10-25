@@ -8,7 +8,7 @@ def turn_txt_into_pig_latin(input_file):
             translation = re.sub(r"([АЕЁИОУЫЭЮЯаеёиоуыэюя])", r"\1с\1", line)
             lines.append(translation)
         result = ''.join(lines)
-    return lines
+    return result
 
 
 def get_song_chords(input_file):
